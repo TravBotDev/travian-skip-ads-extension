@@ -1,5 +1,5 @@
 # Travian Skip Ads Extension
-*A Chrome extension to skip builder ads in the browser game Travian Legends*
+*A Chrome extension to instantly skip 25% building bonus ads in the browser game Travian Legends*
 
 ![](extension/images/2/icon128.png)
 
