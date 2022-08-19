@@ -1,0 +1,38 @@
+{
+	"name": "TravianSkipAds",
+	"description": "An extension to skip builder bonus ads in browser game Travian Legends.",
+	"version": "1.0",
+	"author": "DUDSS",
+	"manifest_version": 3,
+	"options_page": "settings.html",
+	"action": {
+		"default_title": "Disable ad skip",
+		"default_icon": {
+			"16": "images/3/icon16.png",
+			"32": "images/3/icon32.png",
+			"48": "images/3/icon48.png",
+			"64": "images/3/icon128.png"
+		}
+	},
+	"icons": {
+		"16": "images/3/icon16.png",
+		"32": "images/3/icon32.png",
+		"48": "images/3/icon48.png",
+		"64": "images/3/icon128.png"
+	},
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [{
+	    "matches": ["http://*/*","https://*/*"],
+	    "js": ["content_script.js"],
+	    "all_frames": true
+	}],
+	"web_accessible_resources": [{
+		"resources": ["inject.js"],
+		"matches": ["http://*/*","https://*/*"]
+	}],
+	"permissions": [
+		"storage"
+	]
+}
